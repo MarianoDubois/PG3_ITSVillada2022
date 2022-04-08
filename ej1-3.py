@@ -1,9 +1,20 @@
-alto = int(input("introduzca el alto que desea:"))
-ancho = int(input("introduzca el ancho que desea:"))
-relleno = input("introduzca el caracter que desea de relleno:")
+from funciones3 import *
 
-def rectangulo(alto, ancho, relleno):
-    for i in range(alto):
-        print(str(relleno*ancho))
+forma = int(input("introduzca la forma que desea hacer 1.Rectangulo 2.Triangulo 3.Todos: "))
 
-rectangulo(alto, ancho, relleno)
+if forma == 1:
+    alto = int(input("introduzca el alto de su rectangulo: "))
+    ancho = int(input("introduzca el ancho de su rectangulo: "))
+    relleno = input("introduzca el caracter con el que desea rellenar su rectangulo: ")
+    rectangulo(alto, ancho, relleno)
+elif forma == 2:
+    dimensiones = int(input("introduzca de cunato x cuanto va a ser su triangulo: "))
+    relleno = input("introduzca el caracter con el que desea rellenar su triangulo: ")
+    triangulo(dimensiones, relleno)
+elif forma == 3:
+    alto = int(input("introduzca el alto de su rectangulo: "))
+    ancho = int(input("introduzca el ancho de su rectangulo: "))
+    dimensiones = int(input("introduzca de cunato x cuanto va a ser su triangulo: "))    
+    relleno = input("introduzca el caracter con el que desea rellenar su rectangulo: ")
+    rectangulo(alto, ancho, relleno)
+    triangulo(dimensiones, relleno)   
